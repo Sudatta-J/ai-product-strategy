@@ -21,13 +21,14 @@
 
 **What we're building, for whom, why now.**
 
-- **Product:**
-- **AI Value Archetype:**
-- **Vulnerability Scores:** Moat __/5 · Data __/5 · Platform __/5
-- **Top Risk:**
-- **Confidence:** H / M / L
-- **Prototype:** [link]
-- **Kill Criteria:**
+- **Product:** IRM Wizard Evidence Readiness Pilot for governance analysts, control owners, evidence owners, and CISO leadership stakeholders.
+- **Bet Summary:** IRM Wizard can reduce manual evidence collection and improve audit readiness by turning fragmented evidence tasks into a guided, reviewable, and leadership-ready control-health workflow.
+- **AI Value Archetype:** Orchestrator and copilot.
+- **Vulnerability Scores:** Moat 4/5 · Data 4/5 · Platform 2/5
+- **Top Risk:** Platform exposure. Incumbent IRM or security platforms could embed similar evidence collection, control mapping, and control-health reporting directly into existing workflows.
+- **Confidence:** M
+- **Prototype:** [`01-the-bet/prototype.md`](01-the-bet/prototype.md)
+- **Kill Criteria:** Stop or pivot if users cannot connect enough trusted evidence sources, if control owners do not trust generated mappings, if review effort is not materially reduced, or if leadership does not find the control-health signal actionable.
 
 → Details: [`01-the-bet/`](01-the-bet/)
 
