@@ -41,22 +41,22 @@
 ## Encroachment Threat Assessment
 
 ### 1. Platform Encroachment
+**Attacker:** Microsoft Security Copilot and Microsoft 365
+**Vector:** Use Microsoft Graph, Teams, SharePoint, Entra, Defender, Purview, and Power Platform to ship evidence collection, owner follow-up, access review signals, control-health summaries, and leadership reporting directly where security and governance teams already collaborate.
+**Time-to-threat:** 6 to 12 months
+**% of value at risk:** 45%
+
+### 2. Vertical Competitor
 **Attacker:** IRM Wizard
-**Vector:** Ship a native AI control and evidence readiness assistant inside IRM Wizard that drafts evidence requests, suggests owners, checks completeness and freshness, maps evidence to controls, tracks overdue items, and publishes control-health summaries inside the platform of record.
+**Vector:** Ship a native AI control and evidence readiness assistant inside IRM Wizard that drafts evidence requests, suggests owners, checks completeness and freshness, maps evidence to controls, tracks overdue items, and publishes control-health summaries inside the system of record.
 **Time-to-threat:** 6 to 12 months
 **% of value at risk:** 60%
 
-### 2. Vertical Competitor
-**Attacker:** AuditBoard or a focused GRC automation vendor
-**Vector:** Package evidence readiness, audit prep, and control mapping into a vertical workflow for regulated financial services teams.
+### 3. Adjacent Expansion
+**Attacker:** AuditBoard or a focused audit automation vendor
+**Vector:** Add evidence readiness, NIST 800-53 mapping, audit package generation, and control-health reporting as one more workflow inside audit preparation and control testing products.
 **Time-to-threat:** 9 to 18 months
 **% of value at risk:** 35%
-
-### 3. Adjacent Expansion
-**Attacker:** Microsoft Security Copilot and Microsoft 365
-**Vector:** Use Microsoft Graph, Teams, SharePoint, Entra, Defender, Purview, and Power Platform to automate evidence collection and collaboration where many security and governance artifacts already live.
-**Time-to-threat:** 6 to 12 months
-**% of value at risk:** 45%
 
 ---
 
