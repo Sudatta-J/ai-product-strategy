@@ -62,22 +62,22 @@
 
 ## 90-Day Encroachment Plan
 
-*Your partner played the Big Tech attacker. What was their plan to kill you?*
+*Most dangerous plan from the encroacher, followed by the defense.*
 
 **Attacker:**
 IRM Wizard
 
 **Attack vector (target the weakest loop):**
-Exploit the weak network loop by turning existing IRM workflow activity into shared AI learning across control owners, evidence owners, audit tasks, risk records, issues, and leadership dashboards.
+Target the weak network loop by making IRM Wizard's existing customer activity compound automatically. The attack is to turn control records, evidence tasks, owner assignments, audit requests, risk records, issues, exceptions, and review history into shared AI recommendations inside the system of record.
 
 **Weeks 1-4 - what they ship:**
-A native evidence readiness assistant that drafts requests, suggests owners, checks missing evidence, and summarizes status inside current IRM workflows.
+A native Evidence Readiness Assistant embedded in IRM Wizard. It drafts evidence requests, suggests likely evidence owners, checks missing or stale evidence, maps artifacts to NIST 800-53 control objectives, and summarizes readiness status inside existing control and audit workflows.
 
 **Weeks 5-8 - how they poach users:**
-They make adoption feel low-friction because the assistant already sits in the system of record with existing tasks, controls, owners, and audit workflows.
+They position it as a no-switching-cost upgrade for teams already using IRM Wizard. Governance analysts, control owners, and audit partners do not need to leave their current workflow; the assistant uses existing tasks, controls, owners, evidence records, issues, and dashboards to produce immediate value.
 
 **Weeks 9-12 - why users don't come back:**
-Users stay because the native workflow reduces switching cost, captures team activity automatically, and turns IRM history into reusable recommendations.
+Users stay because the product captures network activity by default. Every completed evidence task, corrected mapping, owner response, overdue item, audit request, and review decision improves future recommendations inside IRM Wizard, making the standalone pilot feel like an extra step.
 
 **Your defense:**
-Build a cross-system assurance layer that is deeper than a platform sidecar: structured evidence lineage, human review gates, reusable owner and SME maps, control-to-evidence patterns, reviewer correction capture, freshness scoring, and leadership-ready control-health definitions that improve across teams and source systems.
+Do not compete as a sidecar chatbot. Build a cross-system assurance workflow that IRM Wizard alone cannot fully own: structured evidence lineage across IRM Wizard, IAM, cloud, vulnerability, privacy, cyber defense, SharePoint, and audit sources; human review gates; reusable owner and SME maps; source-system authority rules; control-to-evidence pattern libraries; reviewer correction capture; freshness scoring; exception rationale; and leadership-ready control-health definitions that improve across teams and source systems.
