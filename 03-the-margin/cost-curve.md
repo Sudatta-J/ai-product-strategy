@@ -97,8 +97,31 @@ A reviewed evidence packet includes the evidence request, source artifacts, owne
 
 ## Board One-Pager
 
-**Before (traditional SaaS):** Value is captured mainly through access to workflow records, dashboards, and task tracking.
+### Before: Traditional SaaS
 
-**After (AI-enabled):** Value is captured through completed evidence readiness outcomes: fewer manual collection hours, faster audit preparation, better evidence completeness, and current control-health signals.
+| Metric | Assumption |
+|--------|------------|
+| Revenue | $30/user/month x 1,000 users = $30,000/month |
+| COGS | $3,000/month fixed platform, workflow, support, and storage costs |
+| Gross margin | 90% |
+| Pricing narrative | Customers pay for access to workflow records, dashboards, and task tracking. Value is real, but pricing is weakly connected to completed evidence outcomes. |
 
-**Net margin shift:** The base model is healthy because average AI COGS is low relative to assumed monthly revenue. Protect margin by bundling leader/filler features and metering killer workflows that create heavy inference or review cost.
+### After: AI-Powered
+
+| Metric | Assumption |
+|--------|------------|
+| Revenue | $30/user/month base x 1,000 users + $5/reviewed evidence packet x 2,000 packets = $40,000/month |
+| COGS | $2.10 AI COGS/user/month x 1,000 users + estimated $3,000 platform/support costs = $5,100/month |
+| Gross margin | 87% |
+| Pricing narrative | Customers pay for a workflow plus reviewed evidence outcomes: fewer manual collection hours, faster audit prep, clearer evidence ownership, and leadership-ready control-health signals. |
+
+### Net Margin Shift
+
+| Measure | Shift |
+|---------|-------|
+| Revenue | +$10,000/month |
+| Gross profit | From $27,000/month to $34,900/month |
+| Gross margin % | From 90% to 87% |
+| Board interpretation | Margin percentage decreases slightly because AI introduces variable COGS, but gross profit and net revenue retention potential improve because pricing is tied to completed evidence outcomes. |
+
+**Board narrative:** This is a good trade: AI lowers margin percentage modestly but expands monetizable value. We should protect margin by bundling leader/filler workflows, metering high-cost killer workflows, and keeping frontier model usage reserved for defensibility-sensitive work.
