@@ -17,6 +17,19 @@
 
 **70% rule:** If more than 70% of active users rely on a feature every cycle, bundle it into the base workflow. If usage is lower but high-value or high-cost, make it an add-on or usage-based tier.
 
+## Cost Curve
+
+| Feature | Complexity | Model Tier | Cost/Req | Volume % | Weighted |
+|---------|------------|------------|----------|----------|----------|
+| Draft evidence requests, reminders, formatting, and basic summaries | Simple | Small | $0.010 | 45% | $0.0045 |
+| Evidence extraction, source matching, freshness checks, and packet assembly | Medium | Mid | $0.035 | 35% | $0.0123 |
+| NIST 800-53 mapping, gap analysis, exception rationale, and leadership-ready summaries | Complex | Frontier | $0.090 | 20% | $0.0180 |
+| **Blended** |  |  |  | **100%** | **$0.0348** |
+
+**Blended cost per request:** Approximately **$0.035**.
+
+**Cost curve readout:** Most interactions should stay in small or mid-tier models. Frontier usage is reserved for defensibility-sensitive work where mistakes would create audit, compliance, or leadership risk.
+
 ## Cost Model
 
 | Cost Category | Per-User/Month | Notes |
