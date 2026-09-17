@@ -66,11 +66,26 @@
 
 ## Pricing Model
 
+**Pricing strategy:** Penetrate first, then maximize.
+
+Start by making the core evidence readiness workflow easy to adopt for governance analysts and control owners. Once usage proves time savings, audit readiness improvement, and leadership value, expand pricing around completed evidence packets, reviewed control mappings, and audit-cycle outcomes.
+
+**Unit of work:** Reviewed evidence packet.
+
+A reviewed evidence packet includes the evidence request, source artifacts, owner attribution, freshness check, control-objective mapping, quality review status, exception notes, and leadership-ready control-health signal.
+
 **Current pricing:** Assumed base platform access is seat-based or enterprise-license based.
 
-**Proposed AI pricing:** Bundle core evidence readiness workflow into an IRM Wizard package, then meter high-cost killer workflows by control, assessment, evidence packet, or audit cycle.
+**Proposed AI pricing:** Base fee of **$30/user/month** for the core workflow, plus usage pricing for reviewed evidence packets and high-cost audit outputs.
 
-**Model:** Hybrid: seat/access for adoption plus outcome/usage-based pricing for heavy evidence package generation, advanced control mapping, and audit-ready outputs.
+**Structure:**
+- **Base:** $30/user/month for evidence request orchestration, basic drafting, summaries, reminders, and workflow visibility.
+- **Usage:** $5/reviewed evidence packet for validated evidence lineage, control mapping, freshness checks, exception rationale, and control-health signal generation.
+- **Audit cycle add-on:** Enterprise package for high-volume audit preparation, large control families, or quarterly assessment events.
+
+**Model:** Hybrid: seat/access for adoption plus outcome/usage pricing for reviewed evidence packets, advanced control mapping, and audit-ready outputs.
+
+**Labor test:** If manual evidence coordination takes even 30 minutes of analyst time per evidence packet, a $5 reviewed-packet fee is materially cheaper than manual work at typical GRC labor rates. This supports outcome pricing without making the product feel like a usage tax.
 
 ## Stress Tests
 
