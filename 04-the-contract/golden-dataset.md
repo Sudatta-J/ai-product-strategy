@@ -45,15 +45,32 @@ Rows 2, 5, and 10 are adversarial because they look superficially useful but sho
 
 ## Confidence UX Design
 
-**Approach:** Tiered confidence with mandatory human-in-loop triggers.
+**Approach:** Combine visible uncertainty, tiered confidence, and human-in-loop triggers. The UX should never present AC-2 evidence mapping as a black-box answer. It should show why the AI believes the evidence maps, what is missing, and when a human must decide.
 
-**High confidence (>90%):** Evidence has source, owner, date, account population, review/approval status, and clear traceability to AC-2. The AI can recommend `Full` or `Partial` mapping, but still preserves evidence lineage.
+**High confidence (>90%):** Evidence has source, owner, date, account population, review/approval status, and clear traceability to AC-2. The UI can say: `Ready for analyst confirmation`. Show the mapped control objective, evidence lineage, and why the packet is complete. Human review is optional unless the output will be used for audit delivery or leadership reporting.
 
-**Medium confidence (70-90%):** Evidence appears relevant but has one missing or ambiguous element, such as incomplete remediation, missing reviewer, unclear population, or partial traceability. The AI must flag the issue and request human review.
+**Medium confidence (70-90%):** Evidence appears relevant but has one missing or ambiguous element, such as incomplete remediation, missing reviewer, unclear population, or partial traceability. The UI should visibly soften the answer: `Likely partial mapping - review recommended`. Show the missing fields, source of uncertainty, and recommended follow-up. Human review is required before publication.
 
-**Low confidence (<70%):** Evidence is stale, missing a date, missing ownership, lacks source traceability, conflicts with another source, or is policy-only/design evidence. The AI must avoid full mapping and require human review.
+**Low confidence (<70%):** Evidence is stale, missing a date, missing ownership, lacks source traceability, conflicts with another source, or is policy-only/design evidence. The UI should block auto-mapping and say: `Not enough evidence to map safely`. The output must enter a human review queue.
 
-**User control surface:** Analysts can override mapping decision, freshness, completeness, issue flag, confidence, and human-review status. Overrides must capture reviewer, date, rationale, and whether the correction should be reused in future mapping recommendations.
+**Not confident (<50%):** Evidence is contradictory, unverifiable, unrelated to AC-2, or likely misleading. The UI should block the mapping, prevent leadership-ready language, and require a GRC analyst to either reject the evidence or request new evidence from the owner.
+
+**User control surface:**
+
+- Adjust confidence threshold by workflow: pilot default is 90% for audit-ready use and 70% for analyst workbench triage.
+- See AI reasoning: source evidence, mapped objective, missing fields, freshness logic, and why the decision is `Full`, `Partial`, or `None`.
+- Correct and override: mapping decision, freshness, completeness, traceability, issue flag, required follow-up, confidence, and human-review status.
+- Send correction to learning loop: each edit captures reviewer, date, rationale, corrected output, and whether the correction should become a reusable mapping pattern.
+- Escalate from the same screen: request evidence from owner, assign remediation, send to Oracle-style quality review, or mark as not usable for audit.
+
+**Confidence copy examples:**
+
+| Confidence Tier | UI Copy | Allowed Action |
+|-----------------|---------|----------------|
+| High | `Evidence appears complete and traceable for AC-2. Review lineage before publishing.` | Analyst can confirm; publication still requires approval. |
+| Medium | `Evidence likely supports AC-2, but one or more fields need review.` | Analyst review required. |
+| Low | `Evidence is incomplete, stale, or missing traceability. Do not use as audit-ready evidence.` | Human review queue. |
+| Not confident | `Mapping blocked. Evidence is contradictory, unrelated, or unverifiable.` | Reject or request new evidence. |
 
 ## Reliability Contract
 
@@ -69,6 +86,8 @@ Rows 2, 5, and 10 are adversarial because they look superficially useful but sho
 
 ## HITL Architecture
 
+**Design principle:** Human-in-the-loop should be a shrinking queue, not permanent babysitting. The system should route only uncertain, high-risk, stale, incomplete, or leadership/audit-impacting outputs to humans, and every correction should improve future routing.
+
 Human review is required when:
 
 - Mapping decision is `Partial` or `None`
@@ -80,7 +99,20 @@ Human review is required when:
 - Evidence conflicts with another source system
 - The AI proposes a leadership-ready control-health signal
 
+**Review queue thresholds:**
+
+| Queue | Trigger | Owner | Target Action |
+|-------|---------|-------|---------------|
+| Analyst Review | Medium confidence, partial mapping, missing field, or open exception | GRC analyst | Confirm, correct, or request follow-up evidence |
+| Evidence Owner Follow-Up | Missing owner, missing source, missing date, stale evidence, or incomplete population | Control/evidence owner | Provide corrected evidence or explain exception |
+| Quality Gate | Audit-ready package, leadership signal, ambiguous mapping, or high-impact exception | Oracle-style reviewer / GRC lead | Approve, reject, or send back for revision |
+| Escalation | Conflicting sources, likely hallucination, unsupported conclusion, or regulatory ambiguity | GRC lead + relevant SME | Decide defensible treatment and document rationale |
+
 **Escalation path:** AI drafts mapping -> GRC analyst reviews -> control/evidence owner resolves missing evidence -> Oracle-style quality review validates defensibility -> GRC lead approves for audit or leadership use.
+
+**Correction capture:** Every human edit is stored as a structured correction: original AI output, corrected output, reason code, reviewer, date, control objective, evidence type, source system, and reuse permission. These corrections feed the data flywheel by improving future AC-2 mappings, freshness checks, and owner follow-up recommendations.
+
+**Success measure:** Over time, the percentage of AC-2 evidence packets requiring manual review should fall while false full-mapping rate remains below the reliability threshold.
 
 ## Red-Team Findings
 
