@@ -49,18 +49,20 @@
 ## Board Pitch
 
 **Thesis (1 sentence):**
+Fund a controlled IRM Wizard pilot that helps GRC analysts turn fragmented AC-2 evidence into reviewable control readiness, reducing evidence-cycle time by at least 25% without transferring accountability to automation.
 
 **The case:**
-1. Why now:
-2. What's defensible:
-3. The economics:
+1. Why now: Evidence work is already moving outside the governed process: analysts are using seven identified workarounds across spreadsheets, SharePoint, messaging, and external AI tools, creating approximately $7,500 per month in hidden spend while increasing data-leakage, lineage, and unsupported-conclusion risk. The next AC-2 evidence cycle gives us a bounded opportunity to replace those workarounds with a governed workflow and measure the result.
+2. What's defensible: The moat is the cross-system assurance layer: evidence lineage, source-authority rules, control-to-evidence patterns, reviewer corrections, freshness scoring, and accountable human decisions captured across IRM Wizard, IAM, and collaboration systems. Our network learning loop is currently weak; this pilot must prove that reviewer corrections become reusable assets across teams, or the defensibility claim does not hold.
+3. The economics: AI processing costs approximately $2.10 per user per month against a proposed $30 base price, leaving $27.90 before other delivery costs; even at 3x inference cost, that leaves $23.70, or 79% of base revenue, before non-AI COGS. Lower-cost models handle routine evidence work, while higher-cost models are reserved for ambiguous mappings and gap analysis; reviewed evidence packets provide the outcome-based revenue component.
 
 **The risks:**
-1. Trust / failure modes:
-2. Scale / governance:
-3. Competitive:
+1. Trust / failure modes: The unacceptable failure is a plausible-looking PASS based on stale, incomplete, or unsupported evidence that reaches leadership or an auditor as fact. Every recommendation retains its source citation, freshness status, rationale, and confidence tier; uncertain or material conclusions require human approval, and the release is blocked if the golden dataset exposes false PASS behavior.
+2. Scale / governance: At 10x usage, unmanaged tool calls, sensitive-data retention, review queues, and model costs become the failure points. Agents may collect, classify, draft, route, and recommend, but may not approve exceptions, accept risk, issue audit conclusions, or publish control health; critical actions are allowlisted and logged, and the 90-day gate tests whether human review shrinks rather than becoming a permanent operating burden.
+3. Competitive: The forcing scenario is Microsoft or an incumbent IRM platform embedding equivalent evidence collection and control mapping before we establish a cross-system learning advantage. We stop or reposition if the pilot cannot connect trusted sources, reduce median evidence-cycle time by 25%, reduce reviewer effort by 30%, earn weekly use from five analysts and two control owners, or produce an actionable leadership signal by week six.
 
 **The ask:**
+Approve a capped six-month investment of $650,000 and 5.5 dedicated FTE: one senior product manager, one engineering lead, two integration engineers, one AI/ML engineer, and half-time product design, supported by named GRC and security reviewers. Release the funding in stages, with a binding 90-day go, revise, or stop decision based on adoption, evidence-cycle time, reviewer effort, false PASS performance, cost, and leadership usefulness. This funds the AC-2 pilot, governed integrations, evaluation controls, reviewer workflow, reporting, and a conditional provider-portability exercise; it pauses reminder-message automation, expansion to additional control families, and any enterprise rollout until the pilot passes.
 
 ## M1 Baseline vs. Now
 *Your 3-sentence AI strategy from Module 1 vs. what you'd say now:*
