@@ -68,5 +68,7 @@ Approve a capped six-month investment of $650,000 and 5.5 dedicated FTE: one sen
 *Your 3-sentence AI strategy from Module 1 vs. what you'd say now:*
 
 **M1 baseline:**
+Build an AI agent squad that helps IT GRC teams coordinate evidence, map policies and controls to NIST 800-53, improve audit readiness, and give CISO leadership a clearer view of control health. The opportunity is attractive because the work is manual, high-stakes, fragmented across systems, and dependent on specialized organizational context. The principal risk is that IRM Wizard or Microsoft could absorb the product if it remains a separate assistant instead of becoming part of the governed GRC workflow.
 
 **Now:**
+Fund a controlled IRM Wizard Evidence Readiness pilot focused on AC-2, where AI collects and checks evidence, recommends traceable mappings, and escalates uncertain or material decisions to accountable humans. The defensible asset is not the assistant itself; it is the cross-system evidence lineage, source-authority rules, reviewer corrections, freshness signals, and reusable control-to-evidence patterns that improve future work. Approve $650,000 and 5.5 FTE for six months, with a binding 90-day decision to stop unless the pilot reduces evidence-cycle time by 25%, reviewer effort by 30%, earns sustained pilot adoption, and produces leadership-ready control health without unsupported PASS conclusions.
