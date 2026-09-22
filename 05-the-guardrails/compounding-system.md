@@ -112,10 +112,14 @@ This policy does **not** allow agents to make final audit conclusions, approve r
 
 | Tool | Owner | Risk Level | Decision |
 |------|-------|-----------|----------|
-| | | H / M / L | keep / govern / kill |
-| | | H / M / L | keep / govern / kill |
-| | | H / M / L | keep / govern / kill |
+| Analysts export IRM Wizard tasks to spreadsheets, then use ChatGPT to summarize overdue evidence | Support tickets and analyst interviews - workflow gap | H | build |
+| Control owners paste IAM access-review exports into public AI tools to explain exceptions | Security review and user interviews - trust gap | H | build |
+| Teams use Outlook or Teams Copilot to draft evidence requests outside IRM Wizard | Message samples and user interviews - workflow gap | H | partner |
+| GRC analysts assemble audit packets in SharePoint folders and use AI to write the narrative | Audit retrospectives and file-pattern review - capability gap | H | build |
+| Security teams use vendor AI features to summarize vulnerability and cloud-control exports | API and export patterns - capability gap | M | partner |
+| Managers paste control-health data into ChatGPT to rewrite leadership updates | Leadership interviews and document history - trust gap | M | build |
+| Power Automate, Zapier, or Make recipes move reminders between IRM Wizard, Jira, email, and Teams | Automation-directory audit - workflow gap | M | partner |
 
-**Total tools found:**
-**Tools after triage:**
-**Estimated hidden spend:**
+**Total tools found:** 7 workarounds
+**Tools after triage:** 4 build candidates
+**Estimated hidden spend:** $7,500/month in duplicate licenses, analyst effort, and unmanaged automation
